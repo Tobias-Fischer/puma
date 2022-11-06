@@ -25,7 +25,7 @@ try:
                             Extension("pumapy.physicsmodels.isotropic_conductivity_utils", [os.path.join("python", "pumapy", "physicsmodels", "isotropic_conductivity_utils.pyx")]),
                             Extension("pumapy.physicsmodels.anisotropic_conductivity_utils", [os.path.join("python", "pumapy", "physicsmodels", "anisotropic_conductivity_utils.pyx")]),
                             Extension("pumapy.physicsmodels.elasticity_utils", [os.path.join("python", "pumapy", "physicsmodels", "elasticity_utils.pyx")]),
-                            ])
+                            ], force=True)
 except ImportError:  # if cython not found, use existing C code
     extensions = [
                   Extension("pumapy.generation.tpms_utils", [os.path.join("python", "pumapy", "generation", "tpms_utils.c")]),
